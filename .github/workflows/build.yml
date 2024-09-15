@@ -40,11 +40,11 @@ jobs:
 
       uses: hendrikmuhs/ccache-action@v1
 
-      if: runner.os == 'Linux'
+      if: runner.os=='Linux'
+      
+      with:
 
-      with:
-
-        key: ${{ matrix.os }}-${{ matrix.enable_ui }}
+        key: ${{ matrix.os }}-${{ matrix.enable_ui }}
 
     - uses: seanmiddleditch/gha-setup-ninja@master
 
